@@ -1,0 +1,9 @@
+public class BasicShape.java{  //PascalCase=ClassName
+
+    double x;
+    double y; 
+    public boolean intersection(Circle c) { return false;}
+    public boolean intersection(Square s) { return false;}
+    public boolean intersection(Rectangle r) { return false;}
+
+}

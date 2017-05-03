@@ -1,0 +1,7 @@
+public static void main (String[]){
+    public List<BasicShape> colliders = new ArrayList<BasicShape>(); //there will be an index total of 2
+
+
+
+
+}

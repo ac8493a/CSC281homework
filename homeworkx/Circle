@@ -1,0 +1,69 @@
+class Circle extends BasicShapes.java { //subclass inherits from superclass
+    double radius=10.0; // double= float
+
+
+
+//------------------------------------------------------
+
+   public class Test {
+   public static void main(String args[]) {
+      Circle c = new Circle(); // testing whether custom instance is possible
+      c.x = 5;
+      c.y = 5;
+      c.radius=10;
+   }
+}
+
+public boolean intersects(Square s) { // Circle intersects with square
+Circle c = this;
+double circleDistanceX = Math.abs(c.x - s.x);
+double circleDistanceY = Math.abs(c.y - s.y);
+
+if (circleDistanceX > (s.length/2 + c.radius)) { 
+return false; 
+}
+if (circleDistanceY > (s.height/2 + c.radius)) { 
+return false; 
+}
+
+if (circleDistanceX <= (s.length/2)) {
+return true; 
+} 
+if (circleDistanceY <= (s.height/2)) { 
+return true; 
+}
+
+double cornerDistance = Math.sqrt(Math.pow(circleDistanceX - s.length/2,2) +
+	                        Math.pow(circleDistanceY - s.height/2, 2));
+return (cornerDistance <= (c.radius)); 
+}
+
+//---------------------------------------------
+public boolean intersects(Rectangle s) { // Circle intersects with rectangle
+Circle c = this;
+double circleDistanceX = Math.abs(c.x - r.x);
+double circleDistanceY = Math.abs(c.y - r.y);
+
+if (circleDistanceX > (r.length/2 + c.radius)) { 
+return false; 
+}
+if (circleDistanceY > (r.height/2 + c.radius)) { 
+return false; 
+}
+
+if (circleDistanceX <= (r.length/2)) {
+return true; 
+} 
+if (circleDistanceY <= (r.height/2)) { 
+return true; 
+}
+
+double cornerDistance = Math.sqrt(Math.pow(circleDistanceX - r.length/2,2) +
+	                        Math.pow(circleDistanceY - r.height/2, 2));
+return (cornerDistance <= (c.radius)); 
+}
+
+
+
+
+}

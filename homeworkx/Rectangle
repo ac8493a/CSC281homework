@@ -1,0 +1,13 @@
+class Rectangle extends BasicShape.java {
+    double length;
+    double height;
+
+public class Test {
+    public static void main(String args[]) {
+    Rectangle r = new Rectangle();
+    r.x= 10;
+    r.y =8;
+    r.length =3.5;
+    r.height=8.5; 
+
+}
