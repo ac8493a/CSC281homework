@@ -1,6 +1,9 @@
 /**
 *@author Adam Carranza
 *@since May 3, 2017
+*
+* Score: 85
+* Incorrect output for all cases.
 */
 
 import sort.*;
@@ -15,7 +18,7 @@ public class SortingTest {
     DESCENDING
   }
 
-  
+
 /**
 *this method takes data from main and randomizes arrays
 *@param either 10,100,1000 which is the limit of random values allowed per array instance
@@ -34,9 +37,9 @@ public class SortingTest {
   public static void main(String[] args) {
     SortingTest tester = new SortingTest(); //runs new blank SortingTest
     double ba10=0;
-    double ba100=0; 
+    double ba100=0;
     double ba1000=0;
-    double bd10=0; 
+    double bd10=0;
     double bd100=0;
     double bd1000=0;
     double sa10=0;
@@ -61,7 +64,7 @@ public class SortingTest {
       int[] testFor10 =randomArray(10);
       int[] testFor100 =randomArray(100);
       int[] testFor1000 =randomArray(1000);
-   
+
 
 
     tester.testAllSorters(testFor10);  //tests array
@@ -81,7 +84,7 @@ public class SortingTest {
     ia100+= Insertion.ascendingCounter;
     id100+= Insertion.descendingCounter;
 
-  
+
 
     tester.testAllSorters(testFor1000);
     ba1000+= Bubble.ascendingCounter;
@@ -162,7 +165,7 @@ public class SortingTest {
     System.out.println("length 1000: " +id1000);
 
 }
-     
+
 
 
 
@@ -191,7 +194,7 @@ public class SortingTest {
     }
     return true;
   }
-  
+
   private boolean testBubbleDescending(int[] data) {
     Bubble.Descending(data);
     int[] check = {5, 4, 3, 2, 1};
@@ -201,9 +204,9 @@ public class SortingTest {
     	}
     }
     return true;
-    
+
   }
-  
+
   private boolean testSelectionAscending(int[] data) {
    Selection.ascending(data);
     int[] check = {1, 2, 3, 4, 5};
@@ -212,9 +215,9 @@ public class SortingTest {
         return false;
       }
     }
-    return true; 
+    return true;
   }
-  
+
   private boolean testSelectionDescending(int[] data) {
     Selection.descending(data);
     int[] check = {5, 4, 3, 2, 1};
@@ -223,17 +226,17 @@ public class SortingTest {
         return false;
       }
     }
-    return true; 
+    return true;
   }
 
   private boolean testInsertionAscending(int[] data) {
     int[] sortedData = Insertion.ascending(data);
     boolean checkSort = isSorted(sortedData, SortDirection.ASCENDING);
     return checkSort;
-  } 
-  
+  }
+
   private boolean testInsertionDescending(int[] data) {
-    int[] sortedData = Insertion.descending(data); 
+    int[] sortedData = Insertion.descending(data);
     boolean checkSort = isSorted(sortedData, SortDirection.DESCENDING);
     return checkSort;
   }
@@ -264,6 +267,5 @@ public class SortingTest {
 		}
 		return true;
 
-	} 
+	}
 }
-  
