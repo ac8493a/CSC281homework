@@ -1,5 +1,9 @@
 /**
  * Homework 2 - PolyWhirli
+ * Score: 90
+ * Good work!
+ * -10 for not following input specifications.
+ *
  * NAME:CHESSFYN
  * Due: Monday, April 3rd at 11:59pm. Follow the standard homework submission guidelines.
  * 
